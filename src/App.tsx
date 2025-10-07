@@ -11,6 +11,7 @@ import perfilIcon from './assets/img/perfil.png';
 import compraIcon from './assets/img/compra.png';
 import ProductCarousel  from './components/ProductCarousel';
 import ShippingInfo from './components/ShippingInfo';
+import Map from './components/Map';
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
       <SecureSection />
       <ProductCarousel /> 
       <ShippingInfo />
+      <Map />
     </div>
   );
 }
