@@ -12,6 +12,8 @@ import compraIcon from './assets/img/compra.png';
 import ProductCarousel  from './components/ProductCarousel';
 import ShippingInfo from './components/ShippingInfo';
 import Map from './components/Map';
+import Motorpost from './components/Motorpost';
+import PaymentMethods from './components/PaymentMethods';
 
 
 function App() {
@@ -44,6 +46,8 @@ function App() {
       <ProductCarousel /> 
       <ShippingInfo />
       <Map />
+      <Motorpost />
+      <PaymentMethods />
     </div>
   );
 }
