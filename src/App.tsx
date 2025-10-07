@@ -10,6 +10,7 @@ import motorllantasLogo from './assets/img/motorllantas.png';
 import perfilIcon from './assets/img/perfil.png';
 import compraIcon from './assets/img/compra.png';
 import ProductCarousel  from './components/ProductCarousel';
+import ShippingInfo from './components/ShippingInfo';
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
       <InfoSection />
       <SecureSection />
       <ProductCarousel /> 
+      <ShippingInfo />
     </div>
   );
 }
