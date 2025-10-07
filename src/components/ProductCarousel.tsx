@@ -179,7 +179,7 @@ const products = [
     discount: 9,
   },
   {
-    imageUrl: 'https://motorllantas.com/wp-content/uploads/2024/07/Nankang-AS-2-205-45R17.jpg',
+    imageUrl: 'https://motorllantas.com/wp-content/uploads/2.jpg',
     title: 'Nankang AS-2+ 205/45R17',
     grip: 'Mejor Agarre',
     rating: 5,
