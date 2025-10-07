@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import VehicleSelector from './components/VehicleSelector';
 import TireSearch from './components/TireSearch';
+import InfoSection from './components/InfoSection';
 import motorllantasLogo from './assets/img/motorllantas.png';
 import perfilIcon from './assets/img/perfil.png';
 import compraIcon from './assets/img/compra.png';
@@ -31,6 +32,7 @@ function App() {
         </div>
         <h1 className="main-title">¡Busca rápido tus llantas!</h1>
       </main>
+      <InfoSection />
     </div>
   );
 }
