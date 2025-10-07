@@ -1,4 +1,6 @@
 import React from 'react';
+import 'slick-carousel/slick/slick.css'; 
+import 'slick-carousel/slick/slick-theme.css';
 import './App.css';
 import VehicleSelector from './components/VehicleSelector';
 import TireSearch from './components/TireSearch';
@@ -7,6 +9,8 @@ import SecureSection from './components/SecureSection';
 import motorllantasLogo from './assets/img/motorllantas.png';
 import perfilIcon from './assets/img/perfil.png';
 import compraIcon from './assets/img/compra.png';
+import ProductCarousel  from './components/ProductCarousel';
+
 
 function App() {
   return (
@@ -35,6 +39,7 @@ function App() {
       </main>
       <InfoSection />
       <SecureSection />
+      <ProductCarousel /> 
     </div>
   );
 }
