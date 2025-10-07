@@ -104,3 +104,52 @@
   color: black;
   font-weight: 700;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    left: 10px;
+    padding: 12px 14px;
+  }
+
+  .step-title {
+    font-size: 14px;
+  }
+
+  .vehicle-options {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 16px;
+    padding: 30px 16px 16px 16px;
+  }
+
+  .vehicle-option .icon img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .vehicle-option.vehicle-type-car .icon img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 576px) {
+  .vehicle-options {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .vehicle-option .icon img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .vehicle-option.vehicle-type-car .icon img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .vehicle-option .text {
+    font-size: 12px;
+  }
+}
