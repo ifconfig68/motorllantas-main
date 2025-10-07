@@ -6,6 +6,7 @@ import ProductCard from './ProductCard';
 import './ProductCarousel.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import nankangLogo from '../assets/img/Nankang-logo.png';
 
 const products = [
   {
@@ -17,7 +18,7 @@ const products = [
     shipping: 'Envío Gratis',
     oldPrice: 309758,
     price: 278049,
-    brandLogo: 'src/assets/img/Nankang-logo.png',
+    brandLogo: nankangLogo,
     discount: 10,
   },
   {
@@ -53,7 +54,7 @@ const products = [
     shipping: 'Envío Gratis',
     oldPrice: 335386,
     price: 303659,
-    brandLogo: 'src/assets/img/Nankang-logo.png',
+    brandLogo: nankangLogo,
     discount: 9,
   },
   {
@@ -65,7 +66,7 @@ const products = [
     shipping: 'Envío Gratis',
     oldPrice: 329270,
     price: 307317,
-    brandLogo: 'src/assets/img/Nankang-logo.png',
+    brandLogo: nankangLogo,
     discount: 7,
   },
   // Slide 2
@@ -78,7 +79,7 @@ const products = [
     shipping: 'Envío Gratis',
     oldPrice: 309758,
     price: 278049,
-    brandLogo: 'src/assets/img/Nankang-logo.png',
+    brandLogo: nankangLogo,
     discount: 10,
   },
   {
@@ -114,7 +115,7 @@ const products = [
     shipping: 'Envío Gratis',
     oldPrice: 335386,
     price: 303659,
-    brandLogo: 'src/assets/img/Nankang-logo.png',
+    brandLogo: nankangLogo,
     discount: 9,
   },
   {
@@ -126,7 +127,7 @@ const products = [
     shipping: 'Envío Gratis',
     oldPrice: 329270,
     price: 307317,
-    brandLogo: 'src/assets/img/Nankang-logo.png',
+    brandLogo: nankangLogo,
     discount: 7,
   },
   // Slide 3
@@ -139,7 +140,7 @@ const products = [
     shipping: 'Envío Gratis',
     oldPrice: 309758,
     price: 278049,
-    brandLogo: 'src/assets/img/Nankang-logo.png',
+    brandLogo: nankangLogo,
     discount: 10,
   },
   {
@@ -175,11 +176,11 @@ const products = [
     shipping: 'Envío Gratis',
     oldPrice: 335386,
     price: 303659,
-    brandLogo: 'src/assets/img/Nankang-logo.png',
+    brandLogo: nankangLogo,
     discount: 9,
   },
   {
-    imageUrl: 'https://motorllantas.com/wp-content/uploads/2.jpg',
+    imageUrl: 'https://motorllantas.com/wp-content/uploads/2024/07/Nankang-AS-2-205-45R17.jpg',
     title: 'Nankang AS-2+ 205/45R17',
     grip: 'Mejor Agarre',
     rating: 5,
@@ -187,7 +188,7 @@ const products = [
     shipping: 'Envío Gratis',
     oldPrice: 329270,
     price: 307317,
-    brandLogo: 'src/assets/img/Nankang-logo.png',
+    brandLogo: nankangLogo,
     discount: 7,
   },
 ];
