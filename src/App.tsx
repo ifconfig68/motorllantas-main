@@ -3,6 +3,7 @@ import './App.css';
 import VehicleSelector from './components/VehicleSelector';
 import TireSearch from './components/TireSearch';
 import InfoSection from './components/InfoSection';
+import SecureSection from './components/SecureSection';
 import motorllantasLogo from './assets/img/motorllantas.png';
 import perfilIcon from './assets/img/perfil.png';
 import compraIcon from './assets/img/compra.png';
@@ -33,6 +34,7 @@ function App() {
         <h1 className="main-title">¡Busca rápido tus llantas!</h1>
       </main>
       <InfoSection />
+      <SecureSection />
     </div>
   );
 }
