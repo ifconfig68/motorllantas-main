@@ -1,20 +1,23 @@
-.secure-section {
+.secure-section-wrapper {
     width: 100%;
     padding: 50px 20px;
     background-color: #111;
   }
   
-  .secure-section img {
-    width: 100%;
+  .secure-section {
     max-width: 1200px;
     margin: 0 auto;
+  }
+
+  .secure-section img {
+    width: 100%;
     display: block;
     border-radius: 10px;
   }
   
   /* Responsive Design */
   @media (max-width: 768px) {
-    .secure-section {
+    .secure-section-wrapper {
       padding: 30px 15px;
     }
   }

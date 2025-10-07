@@ -4,8 +4,10 @@ import seguro from '../assets/img/seguro.jpg';
 
 function SecureSection() {
   return (
-    <div className="secure-section">
-      <img src={seguro} alt="Secure payment" />
+    <div className="secure-section-wrapper">
+        <div className="secure-section">
+            <img src={seguro} alt="Secure payment" />
+        </div>
     </div>
   );
 }
