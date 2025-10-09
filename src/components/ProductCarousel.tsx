@@ -49,7 +49,7 @@ const ProductCarousel: React.FC = () => {
     <div className="product-carousel-container">
       <div className="carousel-header">
         <h2>Las mejores llantas</h2>
-        <Link to="/offers" className="view-more-button">VER MÁS...</Link>
+        <Link to="/tires" className="view-more-button">VER MÁS...</Link>
       </div>
       <div className="product-carousel">
         <Slider {...settings}>

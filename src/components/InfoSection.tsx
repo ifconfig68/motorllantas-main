@@ -1,6 +1,7 @@
 import React from 'react';
 import './InfoSection.css';
 import photocar from '../assets/img/photocar.JPG';
+import { Link } from 'react-router-dom';
 
 function InfoSection() {
   return (
@@ -16,7 +17,7 @@ function InfoSection() {
             Explora nuestra amplia selección de llantas de alta calidad para autos,
             camionetas, OTR, motos y cuatrimotos.
           </p>
-          <a href="#" className="button">VER CATÁLOGO</a>
+          <Link to="/tires" className="button">VER CATÁLOGO</Link>
         </div>
       </div>
     </div>

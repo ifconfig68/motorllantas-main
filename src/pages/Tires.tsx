@@ -1,19 +1,20 @@
-// src/pages/Offers.tsx
-import React, { useState } from 'react';
+
+// src/pages/Tires.tsx
+import React, { useState, useMemo } from 'react';
 import ProductCard from '../components/ProductCard';
 import { products } from '../data/products';
-import './Tires.css'; // Re-using Tires.css as requested
+import './Tires.css';
 import FilterControls from '../components/FilterControls';
 
 const formatPrice = (price: number) => {
   return `$ ${price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}`;
 };
 
-const Offers: React.FC = () => {
-  const [filteredProducts, setFilteredProducts] = useState(products.filter(p => p.oldPrice)); // Show only products on offer
+const Tires: React.FC = () => {
+  const [filteredProducts, setFilteredProducts] = useState(products);
 
   const handleFilterChange = (filters: { priceRange?: [number, number]; sortOrder?: string }) => {
-    let newFilteredProducts = [...products.filter(p => p.oldPrice)];
+    let newFilteredProducts = [...products];
 
     if (filters.priceRange) {
       newFilteredProducts = newFilteredProducts.filter(
@@ -44,8 +45,8 @@ const Offers: React.FC = () => {
   };
 
   return (
-    <div className="tires-page"> {/* Re-using tires-page class */}
-      <FilterControls onFilterChange={handleFilterChange} products={products.filter(p => p.oldPrice)} />
+    <div className="tires-page">
+      <FilterControls onFilterChange={handleFilterChange} products={products} />
       <div className="product-count">
         Mostrando 1-{filteredProducts.length} de {filteredProducts.length} resultados
       </div>
@@ -63,4 +64,4 @@ const Offers: React.FC = () => {
   );
 };
 
-export default Offers;
+export default Tires;

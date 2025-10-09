@@ -16,6 +16,7 @@ import Map from './components/Map';
 import Motorpost from './components/Motorpost';
 import PaymentMethods from './components/PaymentMethods';
 import Offers from './pages/Offers';
+import Tires from './pages/Tires';
 
 const Home = () => (
   <>
@@ -60,7 +61,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/offers" element={<Offers />} />
-          <Route path="/tires" element={<h1>Página de Llantas</h1>} />
+          <Route path="/tires" element={<Tires />} />
           <Route path="/installation" element={<h1>Página de Instalación</h1>} />
           <Route path="/contact" element={<h1>Página de Contacto</h1>} />
         </Routes>
