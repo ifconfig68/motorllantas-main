@@ -1,5 +1,3 @@
-import nankangLogo from '../assets/img/Nankang-logo.png';
-
 export const products = [
   {
     imageUrl: 'https://motorllantas.com/wp-content/uploads/2024/07/Nankang-NS-2-205-45R16.jpg',
@@ -10,7 +8,7 @@ export const products = [
     shipping: 'Envío Gratis',
     oldPrice: 309758,
     price: 278049,
-    brandLogo: nankangLogo,
+    brandLogo: '../assets/img/Nankang-logo.png',
     discount: 10,
   },
   {
@@ -46,7 +44,7 @@ export const products = [
     shipping: 'Envío Gratis',
     oldPrice: 335386,
     price: 303659,
-    brandLogo: nankangLogo,
+    brandLogo: '../assets/img/Nankang-logo.png',
     discount: 9,
   },
   {
@@ -58,7 +56,7 @@ export const products = [
     shipping: 'Envío Gratis',
     oldPrice: 329270,
     price: 307317,
-    brandLogo: nankangLogo,
+    brandLogo: '../assets/img/Nankang-logo.png',
     discount: 7,
   },
 ];
