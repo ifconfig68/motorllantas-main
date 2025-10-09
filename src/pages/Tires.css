@@ -1,28 +1,40 @@
 .tires-container {
-    max-width: 1200px;
-    margin: 0 auto;
     padding: 20px;
+    background-image: url('../assets/img/fondo 1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
 }
 
 .filter-controls-container {
+    max-width: 1200px;
+    margin: 0 auto 20px auto;
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Centrar verticalmente */
-    margin-bottom: 20px;
+    align-items: center;
 }
 
 .product-count {
-    text-align: right; /* Alinear a la derecha */
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 20px;
+    text-align: right;
     margin-bottom: 10px;
     font-size: 0.9rem;
-    color: #fff; /* Color de texto blanco */
+    color: #fff;
 }
 
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    justify-items: center; /* Centrar las tarjetas individualmente */
+    justify-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 @media (max-width: 768px) {
