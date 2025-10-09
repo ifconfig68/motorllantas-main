@@ -1,0 +1,80 @@
+.contact-page {
+    background-image: url('../assets/img/home1.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.page-container {
+    padding: 20px;
+    position: relative;
+}
+
+.page-title-container {
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.page-title-text {
+    color: #fff;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.contact-content {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.contact-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.contact-content li {
+    margin-bottom: 10px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.submit-button {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #c0392b;
+}
