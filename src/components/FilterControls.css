@@ -1,116 +1,19 @@
+
 .filter-controls {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem;
-  background-color: transparent;
-  border-radius: 8px;
-  font-family: 'Roboto', sans-serif;
-  margin-bottom: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
-.price-filter-container {
-    background-color: #000;
-    padding: 1rem;
-    border-radius: 8px;
+.sort-control label {
+    margin-right: 10px;
+    font-size: 0.9rem;
+    color: #fff; /* Color de texto blanco */
 }
 
-.price-filter-container label {
-    color: #fff;
-    font-weight: bold;
-}
-
-.price-range-labels span {
-    color: #fff;
-}
-
-.filter-dropdown {
-  position: relative;
-}
-
-.filter-button {
-  background-color: transparent;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-}
-
-.filter-button::after {
-  content: '\25BC';
-  margin-left: 0.5rem;
-  font-size: 0.8rem;
-}
-
-.filter-dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
-  z-index: 100;
-  width: 300px;
-}
-
-.filter-dropdown:hover .filter-dropdown-content {
-  display: block;
-}
-
-.price-slider {
-  margin-bottom: 1rem;
-}
-
-.rc-slider-track {
-  background-color: #ff0000;
-}
-
-.rc-slider-handle {
-  border-color: #ff0000;
-}
-
-.price-range-labels {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.9rem;
-  color: #666;
-}
-
-.apply-filter-button {
-  background-color: #ffed00;
-  border: none;
-  border-radius: 4px;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: bold;
-  width: 100%;
-  margin-top: 1rem;
-}
-
-.sort-controls {
-  display: flex;
-  align-items: center;
-}
-
-.sort-controls label {
-  margin-right: 0.5rem;
-}
-
-.sort-controls select {
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 0.5rem;
-  font-size: 1rem;
-}
-
-/* Align left filter and sort controls */
-.filter-controls > div:first-child {
-  margin-right: auto;
+.sort-control select {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff; /* Fondo blanco */
 }

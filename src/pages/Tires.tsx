@@ -1,9 +1,9 @@
 
-// src/pages/Tires.tsx
 import React, { useState, useMemo } from 'react';
 import ProductCard from '../components/ProductCard';
 import { products } from '../data/products';
 import './Tires.css';
+import PriceFilter from '../components/PriceFilter';
 import FilterControls from '../components/FilterControls';
 
 const formatPrice = (price: number) => {
@@ -11,47 +11,64 @@ const formatPrice = (price: number) => {
 };
 
 const Tires: React.FC = () => {
-  const [filteredProducts, setFilteredProducts] = useState(products);
+  const [priceRange, setPriceRange] = useState<[number, number] | null>(null);
+  const [sortOrder, setSortOrder] = useState('default');
 
-  const handleFilterChange = (filters: { priceRange?: [number, number]; sortOrder?: string }) => {
+  const { minPrice, maxPrice } = useMemo(() => {
+    if (products.length === 0) {
+      return { minPrice: 0, maxPrice: 1000000 };
+    }
+    const prices = products.map(p => p.price);
+    return {
+      minPrice: Math.min(...prices),
+      maxPrice: Math.max(...prices),
+    };
+  }, []);
+
+  const filteredAndSortedProducts = useMemo(() => {
     let newFilteredProducts = [...products];
 
-    if (filters.priceRange) {
+    if (priceRange) {
       newFilteredProducts = newFilteredProducts.filter(
-        (p) => p.price >= filters.priceRange![0] && p.price <= filters.priceRange![1]
+        p => p.price >= priceRange[0] && p.price <= priceRange[1]
       );
     }
 
-    if (filters.sortOrder) {
-      switch (filters.sortOrder) {
-        case 'price-asc':
-          newFilteredProducts.sort((a, b) => a.price - b.price);
-          break;
-        case 'price-desc':
-          newFilteredProducts.sort((a, b) => b.price - a.price);
-          break;
-        case 'name-asc':
-          newFilteredProducts.sort((a, b) => a.title.localeCompare(b.title));
-          break;
-        case 'name-desc':
-          newFilteredProducts.sort((a, b) => b.title.localeCompare(a.title));
-          break;
-        default:
-          break;
-      }
+    switch (sortOrder) {
+      case 'price-asc':
+        newFilteredProducts.sort((a, b) => a.price - b.price);
+        break;
+      case 'price-desc':
+        newFilteredProducts.sort((a, b) => b.price - a.price);
+        break;
+      case 'name-asc':
+        newFilteredProducts.sort((a, b) => a.title.localeCompare(b.title));
+        break;
+      case 'name-desc':
+        newFilteredProducts.sort((a, b) => b.title.localeCompare(a.title));
+        break;
+      default:
+        break;
     }
 
-    setFilteredProducts(newFilteredProducts);
-  };
+    return newFilteredProducts;
+  }, [priceRange, sortOrder]);
 
   return (
-    <div className="tires-page">
-      <FilterControls onFilterChange={handleFilterChange} products={products} />
+    <div className="tires-container">
+      <div className="filter-controls-container">
+        <PriceFilter 
+            min={minPrice} 
+            max={maxPrice} 
+            onChange={setPriceRange} 
+        />
+        <FilterControls onSortChange={setSortOrder} />
+      </div>
       <div className="product-count">
-        Mostrando 1-{filteredProducts.length} de {filteredProducts.length} resultados
+        Mostrando 1-{filteredAndSortedProducts.length} de {filteredAndSortedProducts.length} resultados
       </div>
       <div className="product-grid">
-        {filteredProducts.map((product, index) => (
+        {filteredAndSortedProducts.map((product, index) => (
           <ProductCard
             key={index}
             {...product}
