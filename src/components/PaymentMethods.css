@@ -18,6 +18,10 @@
     border-radius: 10px;
 }
 
+.services-image {
+    margin-top: 20px;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .payment-methods-wrapper {

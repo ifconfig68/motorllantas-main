@@ -15,7 +15,6 @@ import Map from './components/Map';
 import Motorpost from './components/Motorpost';
 import PaymentMethods from './components/PaymentMethods';
 
-
 function App() {
   return (
     <div className="App">
