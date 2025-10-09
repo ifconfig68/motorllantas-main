@@ -10,8 +10,8 @@ interface ProductCardProps {
   rating: number;
   stock: number;
   shipping: string;
-  oldPrice: number;
-  price: number;
+  oldPrice?: string;
+  price: string;
   brandLogo: string;
   discount: number;
 }
@@ -42,8 +42,8 @@ const ProductCard: React.FC<ProductCardProps> = ({
         <p className="product-stock">{`Stock: ${stock} disponibles`}</p>
         <p className="product-shipping">{shipping}</p>
         <div className="product-price">
-          <span className="old-price">{`$${oldPrice.toLocaleString()}`}</span>
-          <span className="current-price">{`$${price.toLocaleString()}`}</span>
+          {oldPrice && <span className="old-price">{oldPrice}</span>}
+          <span className="current-price">{price}</span>
         </div>
         <div className="product-brand">
           <img src={brandLogo} alt="Brand" />
