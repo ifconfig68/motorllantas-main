@@ -1,56 +1,25 @@
 // src/pages/Offers.tsx
-import React, { useState } from 'react';
+import React, { useMemo } from 'react';
 import ProductCard from '../components/ProductCard';
 import { products } from '../data/products';
-import './Tires.css'; // Re-using Tires.css as requested
-import FilterControls from '../components/FilterControls';
+import './Offers.css'; // Creating a new CSS file for Offers
+import bannerm from '../assets/img/bannerm.jpg';
 
 const formatPrice = (price: number) => {
   return `$ ${price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}`;
 };
 
 const Offers: React.FC = () => {
-  const [filteredProducts, setFilteredProducts] = useState(products.filter(p => p.oldPrice)); // Show only products on offer
-
-  const handleFilterChange = (filters: { priceRange?: [number, number]; sortOrder?: string }) => {
-    let newFilteredProducts = [...products.filter(p => p.oldPrice)];
-
-    if (filters.priceRange) {
-      newFilteredProducts = newFilteredProducts.filter(
-        (p) => p.price >= filters.priceRange![0] && p.price <= filters.priceRange![1]
-      );
-    }
-
-    if (filters.sortOrder) {
-      switch (filters.sortOrder) {
-        case 'price-asc':
-          newFilteredProducts.sort((a, b) => a.price - b.price);
-          break;
-        case 'price-desc':
-          newFilteredProducts.sort((a, b) => b.price - a.price);
-          break;
-        case 'name-asc':
-          newFilteredProducts.sort((a, b) => a.title.localeCompare(b.title));
-          break;
-        case 'name-desc':
-          newFilteredProducts.sort((a, b) => b.title.localeCompare(a.title));
-          break;
-        default:
-          break;
-      }
-    }
-
-    setFilteredProducts(newFilteredProducts);
-  };
+  // Use useMemo to filter products with discounts only once
+  const discountedProducts = useMemo(() => products.filter(p => p.oldPrice), []);
 
   return (
-    <div className="tires-page"> {/* Re-using tires-page class */}
-      <FilterControls onFilterChange={handleFilterChange} products={products.filter(p => p.oldPrice)} />
-      <div className="product-count">
-        Mostrando 1-{filteredProducts.length} de {filteredProducts.length} resultados
+    <div className="offers-page">
+      <div className="banner-container">
+        <img src={bannerm} alt="Banner de ofertas" className="offers-banner" />
       </div>
       <div className="product-grid">
-        {filteredProducts.map((product, index) => (
+        {discountedProducts.map((product, index) => (
           <ProductCard
             key={index}
             {...product}
