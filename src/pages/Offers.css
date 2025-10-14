@@ -10,7 +10,8 @@
 }
 
 .banner-container {
-    margin-bottom: 20px;
+    max-width: 1200px;
+    margin: 0 auto 20px auto;
 }
 
 .offers-banner {
@@ -19,12 +20,78 @@
     border-radius: 10px;
 }
 
+.controls-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto 20px auto;
+    color: #fff;
+}
+
+.filter-group-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.filter-group-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.price-filter select,
+.sort-control select {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 1rem;
+}
+
+.sort-control {
+    display: flex;
+    align-items: center;
+}
+
+.sort-control label {
+    margin-right: 10px;
+}
+
+.product-count {
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
-    position: relative;
-    z-index: 1;
     max-width: 1200px;
     margin: 0 auto;
+    justify-items: center; /* Center items within the grid cells */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .controls-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .filter-group-left,
+    .filter-group-right {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .filter-group-right {
+        flex-direction: column;
+        align-items: flex-end;
+    }
 }
