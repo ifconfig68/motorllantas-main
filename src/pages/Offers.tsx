@@ -59,14 +59,15 @@ const Offers: React.FC = () => {
         </div>
         <div className="filter-group-right">
             <div className="sort-control">
-                <label htmlFor="sort-order">Ordenar por: </label>
-                <select id="sort-order" onChange={(e) => handleSortChange(e.target.value)} value={sortOrder}>
-                    <option value="default">Por defecto</option>
-                    <option value="price-asc">Precio: más bajo a más alto</option>
-                    <option value="price-desc">Precio: más alto a más bajo</option>
-                    <option value="name-asc">Nombre: A-Z</option>
-                    <option value="name-desc">Nombre: Z-A</option>
-                </select>
+                <label htmlFor="sort-order">Ordenar por: 
+                    <select id="sort-order" onChange={(e) => handleSortChange(e.target.value)} value={sortOrder}>
+                        <option value="default">Por defecto</option>
+                        <option value="price-asc">Precio: más bajo a más alto</option>
+                        <option value="price-desc">Precio: más alto a más bajo</option>
+                        <option value="name-asc">Nombre: A-Z</option>
+                        <option value="name-desc">Nombre: Z-A</option>
+                    </select>
+                </label>
             </div>
             <div className="product-count">
                 Mostrando 1-{filteredProducts.length} de {filteredProducts.length} resultados
