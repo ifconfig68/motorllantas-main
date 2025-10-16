@@ -1,5 +1,5 @@
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import ProductCard from '../components/ProductCard';
 import { products } from '../data/products';
 import './Tires.css';
@@ -24,6 +24,13 @@ const Tires: React.FC = () => {
       maxPrice: Math.max(...prices),
     };
   }, []);
+
+  // Initialize priceRange once minPrice and maxPrice are calculated
+  useEffect(() => {
+    if (priceRange === null) {
+      setPriceRange([minPrice, maxPrice]);
+    }
+  }, [minPrice, maxPrice, priceRange]);
 
   const filteredAndSortedProducts = useMemo(() => {
     let newFilteredProducts = [...products];
@@ -54,18 +61,22 @@ const Tires: React.FC = () => {
     return newFilteredProducts;
   }, [priceRange, sortOrder]);
 
+  const handlePriceChange = (newRange: [number, number]) => {
+    setPriceRange(newRange);
+  };
+
   return (
     <div className="tires-container">
       <div className="filter-controls-container">
         <PriceFilter 
             min={minPrice} 
             max={maxPrice} 
-            onChange={setPriceRange} 
+            onRangeChange={handlePriceChange} 
         />
         <FilterControls onSortChange={setSortOrder} />
       </div>
       <div className="product-count">
-        Mostrando 1-{filteredAndSortedProducts.length} de {filteredAndSortedProducts.length} resultados
+        Mostrando {filteredAndSortedProducts.length} de {products.length} resultados
       </div>
       <div className="product-grid">
         {filteredAndSortedProducts.map((product, index) => (

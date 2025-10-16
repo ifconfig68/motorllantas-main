@@ -13,7 +13,6 @@ const formatPrice = (price: number) => {
 const Offers: React.FC = () => {
   const discountedProducts = useMemo(() => products.filter(p => p.oldPrice), []);
 
-  // Find min and max prices for the slider
   const { minPrice, maxPrice } = useMemo(() => {
     if (discountedProducts.length === 0) return { minPrice: 0, maxPrice: 1000 };
     const prices = discountedProducts.map(p => p.price);
@@ -27,16 +26,13 @@ const Offers: React.FC = () => {
   const [sortOrder, setSortOrder] = useState('default');
   const [priceRange, setPriceRange] = useState<[number, number]>([minPrice, maxPrice]);
 
-  // This effect will run whenever the sort order or price range changes
   useEffect(() => {
     let newFilteredProducts = [...discountedProducts];
 
-    // 1. Filter by price range
     newFilteredProducts = newFilteredProducts.filter(
       p => p.price >= priceRange[0] && p.price <= priceRange[1]
     );
 
-    // 2. Sort the result
     switch (sortOrder) {
       case 'price-asc':
         newFilteredProducts.sort((a, b) => a.price - b.price);
@@ -51,20 +47,24 @@ const Offers: React.FC = () => {
         newFilteredProducts.sort((a, b) => b.title.localeCompare(a.title));
         break;
       default:
-        break; // Keep original order if 'default'
+        break; 
     }
 
     setFilteredProducts(newFilteredProducts);
   }, [sortOrder, priceRange, discountedProducts]);
 
-  // Handlers to update state
   const handleSortChange = (newSortOrder: string) => {
     setSortOrder(newSortOrder);
   };
 
-  const handlePriceApply = (newRange: [number, number]) => {
+  const handlePriceChange = (newRange: [number, number]) => {
     setPriceRange(newRange);
   };
+  
+  // This effect ensures the price range state is updated when the component mounts or the available range changes.
+  useEffect(() => {
+    setPriceRange([minPrice, maxPrice]);
+  }, [minPrice, maxPrice]);
 
   return (
     <div className="offers-page">
@@ -73,8 +73,7 @@ const Offers: React.FC = () => {
       </div>
       <div className="controls-wrapper">
         <div className="filter-group-left">
-          {/* Replace the old select with the new PriceFilter component */}
-          <PriceFilter min={minPrice} max={maxPrice} onApply={handlePriceApply} />
+          <PriceFilter min={minPrice} max={maxPrice} onRangeChange={handlePriceChange} />
         </div>
         <div className="filter-group-right">
             <div className="sort-control">
