@@ -1,12 +1,12 @@
 import React from 'react';
 import './Motorpost.css';
-import motorpost from '../assets/img/motorpost.jpg';
+import fondo2 from '../assets/img/fondo2.jpg';
 
 function Motorpost() {
   return (
     <div className="motorpost-wrapper">
         <div className="motorpost-container">
-            <img src={motorpost} alt="Motorpost" />
+            <img src={fondo2} alt="Motorpost" />
         </div>
     </div>
   );
