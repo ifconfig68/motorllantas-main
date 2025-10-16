@@ -1,8 +1,9 @@
-// src/pages/Offers.tsx
-import React, { useState, useMemo } from 'react';
+
+import React, { useState, useMemo, useEffect } from 'react';
 import ProductCard from '../components/ProductCard';
 import { products } from '../data/products';
-import './Offers.css'; // Using Offers.css
+import PriceFilter from '../components/PriceFilter'; // Import the new component
+import './Offers.css';
 import bannerm from '../assets/img/bannerm.jpg';
 
 const formatPrice = (price: number) => {
@@ -11,19 +12,32 @@ const formatPrice = (price: number) => {
 
 const Offers: React.FC = () => {
   const discountedProducts = useMemo(() => products.filter(p => p.oldPrice), []);
+
+  // Find min and max prices for the slider
+  const { minPrice, maxPrice } = useMemo(() => {
+    if (discountedProducts.length === 0) return { minPrice: 0, maxPrice: 1000 };
+    const prices = discountedProducts.map(p => p.price);
+    return {
+      minPrice: Math.floor(Math.min(...prices)),
+      maxPrice: Math.ceil(Math.max(...prices))
+    };
+  }, [discountedProducts]);
+
   const [filteredProducts, setFilteredProducts] = useState(discountedProducts);
   const [sortOrder, setSortOrder] = useState('default');
+  const [priceRange, setPriceRange] = useState<[number, number]>([minPrice, maxPrice]);
 
-  const handleSortChange = (newSortOrder: string) => {
-    setSortOrder(newSortOrder);
-    applyFiltersAndSorting(newSortOrder);
-  };
-
-  const applyFiltersAndSorting = (currentSortOrder: string) => {
+  // This effect will run whenever the sort order or price range changes
+  useEffect(() => {
     let newFilteredProducts = [...discountedProducts];
 
-    // Sorting logic
-    switch (currentSortOrder) {
+    // 1. Filter by price range
+    newFilteredProducts = newFilteredProducts.filter(
+      p => p.price >= priceRange[0] && p.price <= priceRange[1]
+    );
+
+    // 2. Sort the result
+    switch (sortOrder) {
       case 'price-asc':
         newFilteredProducts.sort((a, b) => a.price - b.price);
         break;
@@ -37,10 +51,19 @@ const Offers: React.FC = () => {
         newFilteredProducts.sort((a, b) => b.title.localeCompare(a.title));
         break;
       default:
-        // No change for 'default'
-        break;
+        break; // Keep original order if 'default'
     }
+
     setFilteredProducts(newFilteredProducts);
+  }, [sortOrder, priceRange, discountedProducts]);
+
+  // Handlers to update state
+  const handleSortChange = (newSortOrder: string) => {
+    setSortOrder(newSortOrder);
+  };
+
+  const handlePriceApply = (newRange: [number, number]) => {
+    setPriceRange(newRange);
   };
 
   return (
@@ -50,12 +73,8 @@ const Offers: React.FC = () => {
       </div>
       <div className="controls-wrapper">
         <div className="filter-group-left">
-          <div className="price-filter">
-            <select>
-              <option value="all">Precio</option>
-              {/* Add price range options here if needed */}
-            </select>
-          </div>
+          {/* Replace the old select with the new PriceFilter component */}
+          <PriceFilter min={minPrice} max={maxPrice} onApply={handlePriceApply} />
         </div>
         <div className="filter-group-right">
             <div className="sort-control">
@@ -70,7 +89,7 @@ const Offers: React.FC = () => {
                 </label>
             </div>
             <div className="product-count">
-                Mostrando 1-{filteredProducts.length} de {filteredProducts.length} resultados
+                Mostrando {filteredProducts.length} de {discountedProducts.length} resultados
             </div>
         </div>
       </div>
