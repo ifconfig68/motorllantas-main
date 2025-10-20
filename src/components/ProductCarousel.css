@@ -1,0 +1,48 @@
+
+.product-carousel-container {
+    padding: 20px 0;
+    width: 100%;
+    height: auto;
+    background-color: #f7f7f7;
+  }
+  
+  .carousel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .carousel-header h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+  }
+  
+  .view-more-button {
+    background-color: #ffdd00;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .product-carousel .slick-dots {
+    bottom: -30px;
+  }
+  
+  .product-carousel .slick-dots li button:before {
+    font-size: 12px;
+    color: #ccc;
+  }
+  
+  .product-carousel .slick-dots li.slick-active button:before {
+    color: #333;
+  }
+  

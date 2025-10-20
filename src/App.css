@@ -1,0 +1,247 @@
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background-image: url('./assets/img/fondo 1.jpg');
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.App {
+  text-align: center;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.App-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #000;
+}
+
+.App-logo {
+  height: 50px;
+}
+
+nav a {
+  margin: 0 20px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+nav a.active {
+  background-color: #FFD700;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 25px;
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+}
+
+.header-icons img {
+  height: 25px;
+  margin-left: 20px;
+}
+
+.header-icons span {
+  margin-left: 20px;
+  font-weight: 700;
+}
+
+main {
+  padding: 50px 0;
+}
+
+.search-container {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #000;
+}
+
+.main-title {
+    font-family: 'Antonio', sans-serif;
+    font-size: clamp(2.5rem, 10vw, 5rem);
+    color: #fff;
+    text-transform: uppercase;
+    margin-top: 100px;
+    font-weight: 700;
+}
+
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .App-header {
+    padding: 20px 30px;
+  }
+
+  nav a {
+    margin: 0 15px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .App-header {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .App-logo {
+    margin-bottom: 20px;
+  }
+
+  nav {
+    margin-bottom: 20px;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .header-icons {
+    margin-top: 20px;
+  }
+
+  .search-container {
+    padding: 20px;
+  }
+
+  .main-title {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 576px) {
+  nav a {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+
+/* Contenedor principal del carrusel */
+.product-carousel {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px 0 50px; /* Aumentar el padding-bottom para dar espacio a los puntos */
+  position: relative;
+}
+
+
+/* Estilo para el carrusel en sí (Slider) */
+.slick-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilo para los puntos de navegación (dots) */
+.slick-dots {
+  position: absolute;
+  bottom: -40px; /* Ajusta los puntos para que no se superpongan */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+.slick-dots li button {
+  background-color: #e67e22; /* Color de los puntos */
+  border-radius: 50%;
+  width: 8px; /* Puntos más pequeños */
+  height: 8px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.slick-dots li.slick-active button {
+  background-color: #333; /* Color del punto activo */
+}
+
+/* Estilos para cada tarjeta de producto */
+.product-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  width: 100%;
+  max-width: 180px; /* Ligeramente más ancho para mejor proporción */
+  margin: 0 10px; /* Aumenta el espacio entre tarjetas */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 380px; /* Altura fija para igualar las tarjetas */
+  overflow: hidden;
+}
+
+
+/* Efecto al hacer hover sobre la tarjeta */
+.product-card:hover {
+  transform: translateY(-5px); /* Elevar la tarjeta al pasar el ratón */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Aumentar la sombra */
+}
+
+/* Estilo para la imagen del producto */
+.product-card img {
+  width: 100%;
+  height: 180px; /* Aumenta la altura de la imagen para llenar más espacio */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px; /* Más espacio debajo de la imagen */
+}
+
+
+/* Título del producto */
+.product-card h3 {
+  font-size: 16px; /* Tamaño del texto */
+  font-weight: 600; /* Negrita */
+  color: #333; /* Color del texto */
+  margin-bottom: 8px; /* Espacio debajo del título */
+  text-transform: capitalize; /* Para hacer que el texto de cada producto inicie con mayúscula */
+}
+
+/* Precio */
+.product-card .price {
+  font-size: 18px; /* Tamaño del precio */
+  font-weight: 600; /* Negrita */
+  color: #e67e22; /* Color para el precio */
+  margin-bottom: 8px; /* Espacio debajo del precio */
+}
+
+/* Precio antiguo (tachado) */
+.product-card .old-price {
+  font-size: 14px; /* Tamaño del texto */
+  text-decoration: line-through; /* Tachado */
+  color: #888; /* Color gris para el precio antiguo */
+  margin-bottom: 8px; /* Espacio debajo del precio */
+}
+
+/* Stock disponible */
+.product-card .stock {
+  font-size: 14px; /* Tamaño del texto */
+  color: #555; /* Color gris para el texto */
+  margin-top: 10px; /* Espacio superior */
+}

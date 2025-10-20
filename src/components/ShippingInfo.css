@@ -1,0 +1,23 @@
+.shipping-info-wrapper {
+    width: 100%;
+    padding: 50px 20px;
+    background-color: #111;
+}
+
+.shipping-info-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.shipping-image {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .shipping-info-wrapper {
+        padding: 30px 15px;
+    }
+}

@@ -1,0 +1,26 @@
+.payment-methods-wrapper {
+    width: 100%;
+    padding: 50px 20px;
+    background-image: url('../assets/img/fondo 1.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.payment-methods-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.payment-methods-container img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .payment-methods-wrapper {
+        padding: 30px 15px;
+    }
+}
