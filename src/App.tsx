@@ -40,6 +40,7 @@ function App() {
           <TireSearch />
         </div>
         <h1 className="main-title">¡Busca rápido tus llantas!</h1>
+        <h1>Cambios en rama main</h1>
       </main>
       <InfoSection />
       <SecureSection />
