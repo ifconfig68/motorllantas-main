@@ -1,16 +1,5 @@
-.installation-page {
-    padding: 20px;
-    background-image: url('../assets/img/home1.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    width: 100%;
-    min-height: 100vh;
-    box-sizing: border-box;
-}
 
 .installation-content {
-    background-color: rgba(0, 0, 0, 0.6);
     color: #fff;
     padding: 30px;
     border-radius: 8px;
