@@ -26,11 +26,11 @@ const Installation: React.FC = () => {
         </div>
 
         <div className="installation-section">
-          <div className="installation-image">
-            <img src={installation2} alt="Instalación de llantas 2" />
-          </div>
           <div className="installation-text">
             <p>Al finalizar, realizamos una revisión final y prueba de calidad para que salgas con la tranquilidad de que tus llantas están instaladas correctamente y listas para rendir al máximo. Te entregamos recomendaciones de mantenimiento y calibración para que prolongues su vida útil y disfrutes de una conducción segura. En  <strong>Motorllantas</strong> no solo cambiamos llantas, te ayudamos a cuidar tu inversión y tu seguridad en la vía. Agenda tu instalación hoy mismo y siente la diferencia de un servicio profesional, rápido y garantizado.</p>
+          </div>
+          <div className="installation-image">
+            <img src={installation2} alt="Instalación de llantas 2" />
           </div>
         </div>
 
