@@ -1,4 +1,3 @@
-import React from 'react';
 import './Contact.css';
 import { FaPhone, FaClock, FaGlobe, FaEnvelope, FaFacebook, FaInstagram, FaYoutube, FaWhatsapp } from 'react-icons/fa';
 
