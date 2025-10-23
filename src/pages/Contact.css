@@ -31,6 +31,10 @@
     margin-bottom: 1rem;
 }
 
+.address-info {
+    margin-bottom: 2rem; 
+}
+
 .contact-details p {
     display: flex;
     align-items: center;

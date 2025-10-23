@@ -1,5 +1,5 @@
 import './Contact.css';
-import { FaPhone, FaClock, FaGlobe, FaEnvelope, FaFacebook, FaInstagram, FaYoutube, FaWhatsapp } from 'react-icons/fa';
+import { FaPhone, FaClock, FaGlobe, FaEnvelope, FaFacebook, FaInstagram, FaYoutube, FaWhatsapp, FaMapMarkerAlt } from 'react-icons/fa';
 
 const Contact = () => {
   return (
@@ -7,7 +7,7 @@ const Contact = () => {
       <div className="contact-info">
         <h2>Ponte en contacto</h2>
         <p>Especialistas en llantas para todo tipo de vehículos.</p>
-        <h3>Cll. 33 #64 – 198 Conquitadores</h3>
+        <p className="address-info"><FaMapMarkerAlt /> Cll. 33 #64 – 198 Conquitadores</p>
         <div className="contact-details">
           <p><FaPhone /> +57 312 299 10 84</p>
           <p><FaClock /> Lunes – Viernes 8:00 am a 5:00 pm</p>
@@ -23,7 +23,7 @@ const Contact = () => {
         </div>
       </div>
       <div className="contact-form-container">
-        <h2>Escríbanos:</h2>
+        <h2>Escríbenos:</h2>
         <form>
           <div className="form-group">
             <label htmlFor="name">Su Nombre: </label>
