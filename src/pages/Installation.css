@@ -73,5 +73,11 @@
 }
 
 .installation-img-2 {
-    object-position: 50% 75%;
+    object-position: 50% 79%;
+}
+
+@media (max-width: 768px) {
+    .installation-section {
+        flex-direction: column;
+    }
 }
