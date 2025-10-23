@@ -18,6 +18,7 @@ import PaymentMethods from './components/PaymentMethods';
 import Offers from './pages/Offers';
 import Tires from './pages/Tires';
 import Contact from './pages/Contact';
+import Installation from './pages/Installation';
 import Footer from './components/Footer';
 
 const Home = () => (
@@ -64,7 +65,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/offers" element={<Offers />} />
           <Route path="/tires" element={<Tires />} />
-          <Route path="/installation" element={<h1>Página de Instalación</h1>} />
+          <Route path="/installation" element={<Installation />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
