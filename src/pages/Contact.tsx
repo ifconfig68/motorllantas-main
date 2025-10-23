@@ -23,7 +23,7 @@ const Contact = () => {
         </div>
       </div>
       <div className="contact-form-container">
-        <h2>Escríbenos:</h2>
+        <h2>Escríbenos</h2>
         <form>
           <div className="form-group">
             <label htmlFor="name">Su Nombre: </label>
