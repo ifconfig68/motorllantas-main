@@ -1,6 +1,6 @@
 import './Footer.css';
 import motorllantasLogo from '../assets/img/motorllantas.png';
-import { FaFacebook, FaInstagram, FaPhone, FaTiktok, FaVoicemail, FaWhatsapp } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaPhone, FaTiktok, FaWhatsapp } from 'react-icons/fa';
 
 const Footer = () => {
   return (
