@@ -17,6 +17,7 @@ import Motorpost from './components/Motorpost';
 import PaymentMethods from './components/PaymentMethods';
 import Offers from './pages/Offers';
 import Tires from './pages/Tires';
+import Footer from './components/Footer';
 
 const Home = () => (
   <>
@@ -65,6 +66,7 @@ function App() {
           <Route path="/installation" element={<h1>Página de Instalación</h1>} />
           <Route path="/contact" element={<h1>Página de Contacto</h1>} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );
