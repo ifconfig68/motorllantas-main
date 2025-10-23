@@ -7,7 +7,6 @@ const Installation: React.FC = () => {
   return (
     <div className="page-container installation-page">
       <div className="page-title-container">
-        <h1 className="page-title-text">INSTALACIÓN</h1>
       </div>
       <div className="installation-content">
         <h2 className="installation-title">Instalación Segura y precisa</h2>

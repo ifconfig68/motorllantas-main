@@ -9,27 +9,13 @@
     box-sizing: border-box;
 }
 
-.page-title-container {
-    background-color: rgba(0, 0, 0, 0.5); 
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.page-title-text {
-    color: #fff;
-    font-size: 2.5rem;
-    text-transform: uppercase;
-}
-
 .installation-content {
     background-color: rgba(0, 0, 0, 0.6);
     color: #fff;
     padding: 30px;
     border-radius: 8px;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 2rem auto;
     font-size: 1.1rem;
     line-height: 1.6;
     font-family: 'Roboto', sans-serif;
@@ -57,9 +43,9 @@
 }
 
 .installation-text {
-    flex: 1;
+    flex: 1.2;
     padding: 20px;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.4);
     border-radius: 8px;
     height: 100%;
 }
@@ -69,7 +55,7 @@
 }
 
 .installation-image {
-    flex: 1;
+    flex: 0.8;
     display: flex;
     align-items: center;
     justify-content: center;
