@@ -1,36 +1,50 @@
 import React from 'react';
 import './Contact.css';
+import { FaPhone, FaClock, FaGlobe, FaEnvelope, FaFacebook, FaInstagram, FaYoutube, FaWhatsapp } from 'react-icons/fa';
 
-const Contact: React.FC = () => {
+const Contact = () => {
   return (
-    <div className="page-container contact-page">
-        <div className="page-title-container">
-            <h1 className="page-title-text">CONTACTO</h1>
+    <div className="contact-container">
+      <div className="contact-info">
+        <h2>Ponte en contacto</h2>
+        <p>Especialistas en llantas para todo tipo de vehículos.</p>
+        <h3>Cll. 33 #64 – 198 Conquitadores</h3>
+        <div className="contact-details">
+          <p><FaPhone /> +57 312 299 10 84</p>
+          <p><FaClock /> Lunes – Viernes 8:00 am a 5:00 pm</p>
+          <p>Sábado 8:00 am a 1:00 pm</p>
+          <p><FaGlobe /> www.motorllantas.com</p>
+          <p><FaEnvelope /> info@motorllantas.com</p>
         </div>
-        <div className="contact-content">
-            <p>¿Tienes alguna pregunta o quieres solicitar una cita? No dudes in ponerte en contacto con nosotros a través de los siguientes medios:</p>
-            <ul>
-                <li><strong>Teléfono:</strong> +1 (555) 123-4567</li>
-                <li><strong>Email:</strong> contacto@tutiendadellantas.com</li>
-                <li><strong>Dirección:</strong> 123 Calle Falsa, Springfield, EE. UU.</li>
-            </ul>
-            <p>También puedes rellenar el siguiente formulario y nos pondremos en contacto contigo lo antes posible:</p>
-            <form className="contact-form">
-                <div className="form-group">
-                    <label htmlFor="name">Nombre</label>
-                    <input type="text" id="name" name="name" required />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="email">Email</label>
-                    <input type="email" id="email" name="email" required />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="message">Mensaje</label>
-                    <textarea id="message" name="message" rows={5} required></textarea>
-                </div>
-                <button type="submit" className="submit-button">Enviar Mensaje</button>
-            </form>
+        <div className="social-icons">
+          <a href="#"><FaFacebook /></a>
+          <a href="#"><FaInstagram /></a>
+          <a href="#"><FaYoutube /></a>
+          <a href="#"><FaWhatsapp /></a>
         </div>
+      </div>
+      <div className="contact-form-container">
+        <h2>Escríbanos:</h2>
+        <form>
+          <div className="form-group">
+            <label htmlFor="name">Su Nombre: </label>
+            <input type="text" id="name" required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="email">Su E-mail: </label>
+            <input type="email" id="email" required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="subject">Asunto: </label>
+            <input type="text" id="subject" />
+          </div>
+          <div className="form-group">
+            <label htmlFor="message">Su Mensaje: </label>
+            <textarea id="message" rows={5}></textarea>
+          </div>
+          <button type="submit" className="submit-btn">Enviar</button>
+        </form>
+      </div>
     </div>
   );
 };
