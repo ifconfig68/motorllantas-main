@@ -60,13 +60,15 @@ function App() {
             <img src={compraIcon} alt="compra" />
           </div>
         </header>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/offers" element={<Offers />} />
-          <Route path="/tires" element={<Tires />} />
-          <Route path="/installation" element={<Installation />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+        <div className="main-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/offers" element={<Offers />} />
+            <Route path="/tires" element={<Tires />} />
+            <Route path="/installation" element={<Installation />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </div>
         <Footer />
       </div>
     </Router>
