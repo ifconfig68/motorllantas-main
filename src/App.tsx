@@ -58,7 +58,6 @@ function App() {
           <div className="header-icons">
             <img src={perfilIcon} alt="perfil" />
             <img src={compraIcon} alt="compra" />
-            <span>CO</span>
           </div>
         </header>
         <Routes>

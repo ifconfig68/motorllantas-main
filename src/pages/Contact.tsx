@@ -7,7 +7,7 @@ const Contact = () => {
       <div className="contact-info">
         <h2>Ponte en contacto</h2>
         <p>Especialistas en llantas para todo tipo de vehículos.</p>
-        <p className="address-info"><FaMapMarkerAlt /> Cll. 33 #64 – 198 Conquitadores</p>
+        <p className="address-info"><FaMapMarkerAlt /> Cll. 33 #64 – 198 Conquistadores</p>
         <div className="contact-details">
           <p><FaPhone /> +57 312 299 10 84</p>
           <p><FaClock /> Lunes – Viernes 8:00 am a 5:00 pm</p>
