@@ -1,0 +1,19 @@
+
+.filter-controls {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.sort-control label {
+    margin-right: 10px;
+    font-size: 0.9rem;
+    color: #fff; /* Color de texto blanco */
+}
+
+.sort-control select {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff; /* Fondo blanco */
+}

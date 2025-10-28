@@ -1,0 +1,83 @@
+.offers-page {
+    padding: 20px;
+    background-image: url('../assets/img/home1.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.banner-container {
+    max-width: 1200px;
+    margin: 0 auto 20px auto;
+}
+
+.offers-banner {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+.controls-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Changed to center for better vertical alignment */
+    max-width: 1200px;
+    margin: 0 auto 20px auto;
+    color: #fff;
+}
+
+.filter-group-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Simplified for direct text alignment */
+.filter-group-right {
+    text-align: right;
+}
+
+.price-filter select,
+.sort-control select {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 1rem;
+    margin-left: 10px; /* Add some space between label and select */
+}
+
+.sort-control {
+    margin-bottom: 10px; /* Space between sort and count */
+}
+
+.product-count {
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-items: center; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .controls-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .filter-group-right {
+        text-align: right; /* Maintain right alignment on mobile */
+    }
+}

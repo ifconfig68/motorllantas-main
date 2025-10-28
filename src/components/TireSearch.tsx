@@ -2,7 +2,10 @@ import React, { useState } from 'react';
 import './TireSearch.css';
 import plateIcon from '../assets/img/placa.png';
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> upstream/main
 const searchOptions = [
   { name: 'PLACA', icon: plateIcon, type: 'plate' },
   { name: 'MARCA DE VEHÍCULO', type: 'brand' },

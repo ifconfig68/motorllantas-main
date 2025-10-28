@@ -1,0 +1,112 @@
+.price-filter-container {
+  position: relative;
+  display: inline-block;
+}
+
+.price-filter-button {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.arrow.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.arrow.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.price-filter-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  z-index: 1000;
+  width: 320px; /* Adjusted width */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slider-container {
+  margin-bottom: 15px;
+}
+
+.price-display-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-range-display {
+  font-size: 1rem;
+  font-weight: 500;
+  white-space: nowrap;
+  color: #000; /* Set text color to black */
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.apply-filter-button {
+  background-color: #ffd700; /* Yellow */
+  color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.apply-filter-button:hover {
+  background-color: #f0c400;
+}
+
+.clear-filter-button {
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 0;
+}
+
+.clear-filter-button:hover {
+    color: #333;
+}
+
+/* Overriding rc-slider styles */
+.rc-slider-track {
+    background-color: red !important;
+}
+
+.rc-slider-handle {
+    background-color: red !important;
+    border-color: red !important;
+    opacity: 1;
+}
+.rc-slider-handle:active {
+    box-shadow: 0 0 5px red;
+}

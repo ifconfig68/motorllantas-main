@@ -6,6 +6,7 @@ import ProductCard from './ProductCard';
 import './ProductCarousel.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+<<<<<<< HEAD
 import nankangLogo from '../assets/img/Nankang-logo.png';
 
 const products = [
@@ -193,6 +194,14 @@ const products = [
     discount: 7,
   },
 ];
+=======
+import { products } from '../data/products';
+import { Link } from 'react-router-dom';
+
+const formatPrice = (price: number) => {
+  return `$ ${price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}`;
+};
+>>>>>>> upstream/main
 
 const ProductCarousel: React.FC = () => {
   const settings = {
@@ -230,12 +239,25 @@ const ProductCarousel: React.FC = () => {
     <div className="product-carousel-container">
       <div className="carousel-header">
         <h2>Las mejores llantas</h2>
+<<<<<<< HEAD
         <button className="view-more-button">VER MÁS...</button>
+=======
+        <Link to="/tires" className="view-more-button">VER MÁS...</Link>
+>>>>>>> upstream/main
       </div>
       <div className="product-carousel">
         <Slider {...settings}>
           {products.map((product, index) => (
+<<<<<<< HEAD
             <ProductCard key={index} {...product} />
+=======
+            <ProductCard
+              key={index}
+              {...product}
+              price={formatPrice(product.price)}
+              oldPrice={product.oldPrice ? formatPrice(product.oldPrice) : undefined}
+            />
+>>>>>>> upstream/main
           ))}
         </Slider>
       </div>

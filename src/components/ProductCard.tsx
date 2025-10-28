@@ -10,8 +10,13 @@ interface ProductCardProps {
   rating: number;
   stock: number;
   shipping: string;
+<<<<<<< HEAD
   oldPrice: number;
   price: number;
+=======
+  oldPrice?: string;
+  price: string;
+>>>>>>> upstream/main
   brandLogo: string;
   discount: number;
 }
@@ -42,8 +47,13 @@ const ProductCard: React.FC<ProductCardProps> = ({
         <p className="product-stock">{`Stock: ${stock} disponibles`}</p>
         <p className="product-shipping">{shipping}</p>
         <div className="product-price">
+<<<<<<< HEAD
           <span className="old-price">{`$${oldPrice.toLocaleString()}`}</span>
           <span className="current-price">{`$${price.toLocaleString()}`}</span>
+=======
+          {oldPrice && <span className="old-price">{oldPrice}</span>}
+          <span className="current-price">{price}</span>
+>>>>>>> upstream/main
         </div>
         <div className="product-brand">
           <img src={brandLogo} alt="Brand" />

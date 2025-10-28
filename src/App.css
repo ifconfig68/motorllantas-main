@@ -12,11 +12,26 @@ body {
 }
 
 .App {
+<<<<<<< HEAD
+=======
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+>>>>>>> upstream/main
   text-align: center;
   width: 100%;
   overflow-x: hidden;
 }
 
+<<<<<<< HEAD
+=======
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+>>>>>>> upstream/main
 .App-header {
   display: flex;
   justify-content: space-between;
@@ -178,6 +193,14 @@ main {
   background-color: #333; /* Color del punto activo */
 }
 
+<<<<<<< HEAD
+=======
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
+
+>>>>>>> upstream/main
 /* Estilos para cada tarjeta de producto */
 .product-card {
   background-color: #fff;
@@ -186,7 +209,11 @@ main {
   padding: 15px;
   width: 100%;
   max-width: 180px; /* Ligeramente más ancho para mejor proporción */
+<<<<<<< HEAD
   margin: 0 10px; /* Aumenta el espacio entre tarjetas */
+=======
+  margin: 0 auto; /* Aumenta el espacio entre tarjetas */
+>>>>>>> upstream/main
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
   display: flex;
